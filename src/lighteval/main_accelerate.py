@@ -191,6 +191,7 @@ def accelerate(  # noqa C901
         args_dict["multichoice_continuations_start_space"] = True
         args_dict["use_chat_template"] = config["base_params"].get("use_chat_template", False)
         pipeline_params.use_chat_template = args_dict["use_chat_template"]
+        args_dict["eval_mode"] = eval_mode
 
         # Keeping only non null params
         args_dict = {k: v for k, v in args_dict.items() if v is not None}
