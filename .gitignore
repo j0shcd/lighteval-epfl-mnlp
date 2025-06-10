@@ -183,6 +183,5 @@ tmp.py
 benchmark_output
 prod_env
 
-logs
 _logs
 outputs

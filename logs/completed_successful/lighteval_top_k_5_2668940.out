@@ -1,0 +1,12 @@
+|           Task            |Version| Metric |Value |   |Stderr|
+|---------------------------|------:|--------|-----:|---|-----:|
+|all                        |       |acc     |0.5587|±  |0.0103|
+|                           |       |acc_norm|0.5446|±  |0.0103|
+|community:mnlp_mcqa_evals:0|      0|acc     |0.5587|±  |0.0103|
+|                           |       |acc_norm|0.5446|±  |0.0103|
+
+{'community|mnlp_mcqa_evals|0': Dataset({
+    features: ['choices', 'chosen_rewards', 'cont_tokens', 'example', 'full_prompt', 'gold', 'gold_index', 'input_tokens', 'instruction', 'metrics', 'num_asked_few_shots', 'num_effective_few_shots', 'padded', 'pred_logits', 'prediction_logits', 'predictions', 'rejected_rewards', 'specifics', 'truncated'],
+    num_rows: 2343
+})}
+Done, outputs in /home/jcohen/lighteval-epfl-mnlp/RAG_output/top_k_5_run_2668940
