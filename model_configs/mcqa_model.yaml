@@ -1,10 +1,10 @@
 model:
   base_params:
     # Change this to your own model name on huggingface hub
-    model_args: "pretrained=Qwen/Qwen3-0.6B,revision=main"
+    model_args: "pretrained=Qwen/Qwen3-0.6B-Base,revision=main"
     # (Optional) If you want to use a chat template, set "use_chat_template" to true.
     # (Optional) However, you must ensure that the chat template is saved in the model checkpoint.
-    use_chat_template: true
+    use_chat_template: false
     dtype: "float16"
     compile: false
 
