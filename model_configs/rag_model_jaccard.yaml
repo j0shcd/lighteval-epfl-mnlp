@@ -1,0 +1,28 @@
+model:
+  base_params:
+    # Change this to your own model name on huggingface hub
+    # (Optional) If you want to use a chat template, set "use_chat_template=true" after revision.
+    # (Optional) However, you must ensure that the chat template is saved in the model checkpoint.
+    model_args: "pretrained=Qwen/Qwen3-0.6B-Base,revision=main"
+    dtype: "float16"
+    compile: false
+  rag_params:
+    # embedding_model: "avsolatorio/GIST-small-Embedding-v0" # Change this to your own embedding model name on huggingface hub
+    # embedding_model: "BAAI/bge-m3" # Change this to your own embedding model name on huggingface hub
+    embedding_model: "Alibaba-NLP/gte-Qwen2-1.5B-instruct" # Change this to your own embedding model name on huggingface hub
+    # embedding_model: "intfloat/multilingual-e5-large-instruct" # Change this to your own embedding model name on huggingface hub
+    # embedding_model: "joshcd/MNLP_M2_document_encoder" # Change this to your own embedding model name on huggingface hub
+    # docs_name_or_path: "m-ric/huggingface_doc" # Change this to your own document name or path on huggingface hub
+    docs_name_or_path: "joshcd/mnlp_qa_dataset" # Change this to your own document name or path on huggingface hub
+    similarity_fn: jaccard # Select the similarity function to use, options are: cosine, dot_product, max_inner_product, jaccard
+    top_k: 5 # Choose the number of documents to retrieve
+    num_chunks: 100000 # This is the limit we set for the number of chunks to retrieve from the document where each chunk is 512 tokens
+    faiss_index_path: "./faiss_cache/qa_dataset.index"
+
+  # Ignore this section, do not modify!
+  merged_weights:
+    delta_weights: false
+    adapter_weights: false
+    base_model: null
+  generation:
+    temperature: 0.0
