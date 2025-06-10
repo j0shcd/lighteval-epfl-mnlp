@@ -15,7 +15,7 @@ model:
     # docs_name_or_path: "m-ric/huggingface_doc" # Change this to your own document name or path on huggingface hub
     docs_name_or_path: "joshcd/mnlp_qa_dataset" # Change this to your own document name or path on huggingface hub
     similarity_fn: cosine # Select the similarity function to use, options are: cosine, dot_product, max_inner_product, jaccard
-    top_k: 20 # Choose the number of documents to retrieve
+    top_k: 30 # Choose the number of documents to retrieve
     num_chunks: 100000 # This is the limit we set for the number of chunks to retrieve from the document where each chunk is 512 tokens
     faiss_index_path: "./faiss_cache/qa_dataset.index"
 
